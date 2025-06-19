@@ -1,4 +1,20 @@
-# UX-UI-wireframe-Task-1-Alfido-university-
+# Task 1 – UX/UI Design Internship @ Alfido Tech
+
+## 📄 Project Description
+This is a **low-fidelity wireframe** for a landing page, created as part of my internship tasks. It outlines the basic layout and user journey using clean HTML and CSS.
+
+## 💡 Objectives
+- Understand structure before styling
+- Improve user flow comprehension
+- Use semantic HTML for accessibility
+
+
+## 🛠️ Tools Used
+- HTML5
+- CSS3
+- VS Code
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
