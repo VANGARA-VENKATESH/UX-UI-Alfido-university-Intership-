@@ -1,0 +1,146 @@
+Let’s move to Task 3: Build an Interactive Prototype using HTML, CSS & JavaScript.
+
+
+
+
+✅ Task 3 – Interactive Prototype Code
+
+Project: Mobile App (Login → Home → Profile)
+Goal: Add interactivity to simulate real user flow (like a clickable prototype in Figma).
+
+
+
+
+📁 Project Structure 
+
+📦 task3-prototype
+ ┣ 📄 index.html
+ ┣ 📄 style.css
+ ┗ 📄 script.js
+
+
+
+#📄 index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mobile App Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <!-- Screens -->
+    <div class="screen active" id="login">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+    </div>
+
+    <div class="screen" id="home">
+      <h2>Home</h2>
+      <p>Welcome, Venkatesh! 🎉</p>
+    </div>
+
+    <div class="screen" id="profile">
+      <h2>Profile</h2>
+      <p>Name: Vangara Venkatesh</p>
+      <p>Internship: UX/UI @ Alfido Tech</p>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav">
+      <button onclick="navigateTo('home')">Home</button>
+      <button onclick="navigateTo('profile')">Profile</button>
+      <button onclick="navigateTo('login')">Logout</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+#🎨 style.css
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.app {
+  width: 360px;
+  height: 640px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.screen {
+  display: none;
+  padding: 30px 20px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+.screen.active {
+  display: flex;
+}
+h2 {
+  margin-bottom: 20px;
+}
+input, button {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+.nav {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #eee;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+.nav button {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+#⚙️ script.js
+
+function navigateTo(screenId) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(screenId).classList.add('active');
+}
+
+function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  if (user === "admin" && pass === "1234") {
+    navigateTo('home');
+  } else {
+    alert("Invalid credentials");
+  }
+}
