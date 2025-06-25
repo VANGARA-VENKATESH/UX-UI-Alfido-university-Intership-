@@ -1,0 +1,136 @@
+# Task 4 – UI Style Guide
+
+## 📌 Objective
+To build a clean, minimal **UI Style Guide** using HTML and CSS that defines consistent visual language and user interface components.
+
+## ✅ Features
+- 🎨 **Color Palette**: Showcases brand colors (primary, secondary, accent, background, text)
+- 🔤 **Typography System**: Defines font weights, families, and usage for heading, subheading, and body
+- 🧩 **UI Components**: Sample buttons demonstrating reuse of color and font styles
+
+## 💡 Technologies Used
+- HTML5
+- CSS3
+- Google Fonts: Poppins & Open Sans
+
+## 📂 Folder Structure
+✅ Folder Structure for GitHub
+
+task4-style-guide/
+├── index.html
+├── style.css
+└── README.md
+
+#📄 index.html (UI for Style Guide)
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UI Style Guide – Task 4</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Style Guide – Task 4</h1>
+
+    <section>
+      <h2>🎨 Color Palette</h2>
+      <div class="colors">
+        <div class="color-block primary">Primary</div>
+        <div class="color-block secondary">Secondary</div>
+        <div class="color-block accent">Accent</div>
+        <div class="color-block bg">Background</div>
+        <div class="color-block text">Text</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🔤 Typography</h2>
+      <p class="font-heading">Heading Font: Poppins, 700</p>
+      <p class="font-subheading">Subheading Font: Poppins, 600</p>
+      <p class="font-body">Body Font: Open Sans, 400</p>
+    </section>
+
+    <section>
+      <h2>🧩 UI Components</h2>
+      <button class="primary-btn">Primary Button</button>
+      <button class="secondary-btn">Secondary Button</button>
+    </section>
+  </div>
+</body>
+</html>
+
+
+
+
+#🎨 style.css (Style Guide Design)
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}
+.colors {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+.color-block {
+  width: 120px;
+  height: 100px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.primary { background: #007bff; }
+.secondary { background: #6c757d; }
+.accent { background: #f39c12; }
+.bg { background: #f8f9fa; color: #333; }
+.text { background: #343a40; }
+
+.font-heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.font-subheading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+}
+.font-body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 6px;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+}
+.primary-btn {
+  background: #007bff;
+  color: white;
+}
+.secondary-btn {
+  background: #6c757d;
+  color: white;
+}
